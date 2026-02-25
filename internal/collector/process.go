@@ -1,18 +1,17 @@
-package main
+package collector
 
 import (
 	"fmt"
-	"os"
-
-	"github.com/sentinelgo-team/SentinelGo/internal/collector"
+	"os/exec"
 )
 
-func main() {
-	fmt.Println("SentinelGo - Process Enumeration")
-
-	err := collector.ListProcesses()
+func ListProcesses() error {
+	cmd := exec.Command("tasklist")
+	output, err := cmd.Output()
 	if err != nil {
-		fmt.Println("Error:", err)
-		os.Exit(1)
+		return err
 	}
+
+	fmt.Println(string(output))
+	return nil
 }
