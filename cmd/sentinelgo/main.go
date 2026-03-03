@@ -1,6 +1,7 @@
 package main
 
 import (
+	"encoding/json"
 	"fmt"
 	"os"
 
@@ -10,9 +11,12 @@ import (
 func main() {
 	fmt.Println("SentinelGo - Process Enumeration")
 
-	err := collector.ListProcesses()
+	processes, err := collector.GetProcessesFromTasklist()
 	if err != nil {
 		fmt.Println("Error:", err)
 		os.Exit(1)
 	}
+
+	jsonData, _ := json.MarshalIndent(processes, "", "  ")
+	fmt.Println(string(jsonData))
 }
