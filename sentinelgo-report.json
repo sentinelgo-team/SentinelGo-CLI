@@ -1,0 +1,1 @@
+{"GeneratedAt":"2026-03-15 17:54:25.073798 +0530 IST m=+0.345893701","TotalAlerts":1,"Alerts":[{"Name":"powershell.exe","PID":"948","Threat":"suspicious_process","Score":40,"Severity":"MEDIUM"}]}
