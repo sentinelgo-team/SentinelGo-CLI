@@ -1,0 +1,12 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>SentinelGo CLI · Operator guide</title>
+<style>
+:root{color-scheme:dark;background:#111a20;color:#e2e9ea;font:1rem/1.6 system-ui,sans-serif}body{max-width:48rem;margin:auto;padding:clamp(1.3rem,6vw,5rem)}header{border-bottom:1px solid #45535b;padding-bottom:2rem}small,dt{font-family:ui-monospace,monospace;color:#8de0c4}h1{font-size:clamp(2.7rem,8vw,5rem);letter-spacing:-.055em;line-height:1.05;margin:1.1rem 0}p{max-width:62ch}pre{padding:1rem;background:#202e36;border-left:3px solid #8de0c4;white-space:pre-wrap;overflow-wrap:anywhere}section{margin-top:2rem}dt{font-weight:bold}dd{margin:0 0 .8rem}footer{margin-top:3rem;color:#bac7cc}
+</style></head>
+<body><main><header><small>OPERATOR GUIDE / WINDOWS</small><h1>SentinelGo CLI</h1><p>A behavioral monitor that looks for unusual activity across Windows processes, network connections, and application events.</p></header>
+<section><h2>Run a bounded scan</h2><p>On the Windows machine you want to monitor, open a terminal in the repository root with Go installed. This example runs ten collection cycles, scanning every three seconds.</p><pre><code>go run ./cmd/sentinelgo -cycles 10 -interval 3s</code></pre></section>
+<section><h2>Scan options</h2><dl><dt>-cycles</dt><dd>Number of collection cycles. The default is 0, which runs until you press Ctrl+C.</dd><dt>-interval</dt><dd>Time between scans. The default is 3s.</dd></dl></section>
+<footer>Documentation preview only. This page does not collect activity or display live alerts.</footer></main></body></html>
